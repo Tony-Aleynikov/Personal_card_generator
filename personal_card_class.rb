@@ -1,9 +1,5 @@
 class PersonalCard
   
-  def self.create_css_doc
-    
-  end
-
 
   def initialize
     @image       = get_image
@@ -82,7 +78,7 @@ class PersonalCard
     file        = File.new(file_path, "w:UTF-8")
 
     file.puts("<!DOCTYPE html>\n")
-    file.puts("<html>)\n")
+    file.puts("<html>\n")
     file.puts("<head>\n  <meta charset=\"UTF-8\" lang=\"ru\">\n" +
               "  <link href=\"#{folder_path + "/personal_cards/style.css"}\"" +
               " rel=\"stylesheet\" type=\"text/css\">\n" + 
@@ -99,9 +95,7 @@ class PersonalCard
     p_tags  = [@name, @description, @phone, @email]
     p_tags  = p_tags.map { |el| tab*2 + "<p>#{el}</p>\n" }.join
 
-    tab + "<div>\n #{img_tag + p_tags}#{tab}</div>\n"
+    tab + "<div class = \"card\">\n#{img_tag + p_tags}#{tab}</div>\n"
   end
 
 end
-
-
