@@ -5,3 +5,4 @@ puts "Вы должны ввести данные для заполнения в
 personal_card = PersonalCard.new
 
 personal_card.create_html_doc
+
