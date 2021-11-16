@@ -1,5 +1,4 @@
 class PersonalCard
-  
 
   def initialize
     @image       = get_image
